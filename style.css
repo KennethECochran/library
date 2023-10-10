@@ -1,0 +1,42 @@
+body{
+    background-color: cadetblue;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header{
+    height: 10vh;
+    width: 100vw;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+}
+
+.headertext{
+    font-size: 46px;
+    margin: 10vw;
+}
+
+#shelves{
+    resize: both;
+    overflow: auto;
+    display: grid;
+    width: 1200px;
+    padding: 4px;
+    gap: 30px;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(auto-fit, 270px);
+}
+
+.book{
+    background-color: antiquewhite;
+    text-align: left;
+    font-size: 1rem;
+    padding: 12px;
+    
+}
+
