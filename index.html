@@ -10,32 +10,34 @@
 <body>
     <div id="header">
         <div class="headertext">Library</div>
+        <button id="showDialog">Add Book</button>
     </div>
     <div id="shelves">
-        <div class="book">
-            <p>Title: HarryPotter 1 </p>
-            <p>Author: J.K Rowling</p>
-            <p>Pages: 223</p>
-            <p>Status: Read</p>
-        </div>
-        <div class="book">
-            <p>Title: HarryPotter 2</p>
-            <p>Author: J.K Rowling</p>
-            <p>Pages: 251</p>
-            <p>Status: Read</p>
-        </div>
-        <div class="book">
-            <p>Title: HarryPotter 3</p>
-            <p>Author: J.K Rowling</p>
-            <p>Pages: 317</p>
-            <p>Status: Not Read</p>
-        </div>
-        <div class="book">
-            <p>Title: HarryPotter 4</p>
-            <p>Author: J.K Rowling</p>
-            <p>Pages: 636</p>
-            <p>Status: Not Read</p>
-        </div>
+        <dialog id="AddBook">
+            <form method="dialog">
+                <p>Add A Book To Your Library</p>
+                <label for="title">Book Title:</label>
+                <input type="text" id="title" name="title">
+                <div>
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author">
+                </div>
+                <label for="pageNum">Pages:</label>
+                <input type="number" id="pageNum" name="pageNum">
+                <div>
+                <input type="radio" id="hasRead" name="readStatus" value="Read">
+                <label for="hasRead">Read</label>
+                </div>
+                <div>
+                <input type="radio" id="notRead" name="readStatus" value="Not read" checked>
+                <label for="notRead">Not Read</label>
+                </div>
+                <div>
+                    <button id="confirmBtn" value="default">Confirm</button>
+                    <button id="cancel">Cancel</button>
+                </div>
+            </form>
+        </dialog>
     </div>
 </body>
 </html>
