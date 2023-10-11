@@ -13,6 +13,7 @@ body{
     width: 100vw;
     background-color: bisque;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -26,17 +27,23 @@ body{
     overflow: auto;
     display: grid;
     width: 1200px;
-    padding: 4px;
+    padding: 25px;
     gap: 30px;
     grid-template-rows: repeat(1, 1fr);
     grid-template-columns: repeat(auto-fit, 270px);
+    justify-content: center;
 }
 
 .book{
     background-color: antiquewhite;
     text-align: left;
-    font-size: 1rem;
+    font-size: 1.5rem;
     padding: 12px;
     
+}
+
+#header >button{
+    margin: 10vw;
+    font-size: 36px;
 }
 
