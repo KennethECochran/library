@@ -34,18 +34,43 @@ body{
     justify-content: center;
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.radioButtons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.buttonContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
 .book{
     border: solid black;
     border-radius: 8px;
     text-align: left;
     font-size: 1.5rem;
     padding: 12px;
-    
 }
 
-#header >button{
+.book > button{
+    margin: 7px;
+}
+
+#header > button{
     margin: 10vw;
     font-size: 36px;
+}
+
+.buttonContainer > button{
+    font-size: 1.3rem;
 }
 
 .book[data-read='True']{
