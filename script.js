@@ -17,6 +17,8 @@ function displayBooks(){
         book.remove();
     });
 
+    let i = 0;
+
     for(const book of myLibrary){
         const container = document.querySelector('#shelves');
         const bookObject = document.createElement('div');
@@ -25,22 +27,28 @@ function displayBooks(){
         const bookAuthor = document.createElement('div');
         const bookPages = document.createElement('div');
         const status = document.createElement('div');
+        const removeButton = document.createElement('button')
+        removeButton.classList.add('remove')
+        removeButton.setAttribute('index', `${i}`)
         bookTitle.textContent = `Title: ${book.title}`;
         bookAuthor.textContent = `Author: ${book.author}`;
         bookPages.textContent = `Pages: ${book.numPages}`;
         status.textContent = `Status: ${book.read}`;
+        removeButton.textContent = 'Remove Book'
         bookObject.appendChild(bookTitle);
         bookObject.appendChild(bookAuthor);
         bookObject.appendChild(bookPages);
         bookObject.appendChild(status);
+        bookObject.appendChild(removeButton);
         container.append(bookObject);
+        i+=1;
     };
 } 
 
 const showButton = document.getElementById("showDialog");
 const addDialog = document.getElementById("AddBook");
-const outputBox = document.getElementById("output");
 const confirmBtn = addDialog.querySelector("#confirmBtn")
+
 
 showButton.addEventListener('click', () => {
     addDialog.showModal()
@@ -55,4 +63,11 @@ confirmBtn.addEventListener('click', () =>{
     const book = new Book(bookTitle, bookAuthor, bookPages, bookStatus);
     addBook(book);
     displayBooks();
+})
+
+document.addEventListener("click", e => {
+    if(e.target.matches('.remove')) {
+        myLibrary.splice(e.target.getAttribute('index'),1);
+        displayBooks();
+    }
 })
