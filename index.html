@@ -15,24 +15,28 @@
     <div id="shelves">
         <dialog id="AddBook">
             <form method="dialog">
-                <p>Add A Book To Your Library</p>
-                <label for="title">Book Title:</label>
+                <p>Add a Book to Your Library!</p>
+                <label for="title">Title:</label>
                 <input type="text" id="title" name="title">
-                <div>
-                <label for="author">Author:</label>
-                <input type="text" id="author" name="author">
-                </div>
-                <label for="pageNum">Pages:</label>
-                <input type="number" id="pageNum" name="pageNum">
-                <div>
-                <input type="radio" id="hasRead" name="readStatus" value="True">
-                <label for="hasRead">Read</label>
-                </div>
-                <div>
-                <input type="radio" id="notRead" name="readStatus" value="False" checked>
-                <label for="notRead">Not Read</label>
-                </div>
-                <div>
+                
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author">
+                
+                    <label for="pageNum">Pages:</label>
+                    <input type="number" id="pageNum" name="pageNum">
+                
+                    <div class="radioButtons">
+                        <div class="top">
+                            <input type="radio" id="hasRead" name="readStatus" value="True">
+                            <label for="hasRead">Read</label>
+                        </div>
+                        
+                        <div class="bottom">
+                            <input type="radio" id="notRead" name="readStatus" value="False" checked>
+                            <label for="notRead">Not Read</label>
+                        </div>
+                    </div>
+                <div class="buttonContainer">
                     <button id="confirmBtn" value="default">Confirm</button>
                     <button id="cancel">Cancel</button>
                 </div>
