@@ -35,7 +35,8 @@ body{
 }
 
 .book{
-    background-color: antiquewhite;
+    border: solid black;
+    border-radius: 8px;
     text-align: left;
     font-size: 1.5rem;
     padding: 12px;
@@ -46,4 +47,13 @@ body{
     margin: 10vw;
     font-size: 36px;
 }
+
+.book[data-read='True']{
+    background: #00e819
+}
+
+.book[data-read='False']{
+    background: #ff0101
+}
+
 
